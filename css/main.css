@@ -1,0 +1,39 @@
+body {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+.main-container {
+    display: block; 
+    width: 100%;
+    height: 100%;
+    background-color: rgb(252, 184, 184);
+}
+.website-header {
+    margin-left: 40px;
+}
+hr {
+    border-style: 2px dotted  rgb(206, 193, 193);
+}
+.posts {
+    display: inline-block;
+    width: 55%;
+    height: 100%;
+    background-color: #9ac2fa;
+    vertical-align: top;
+    margin-left: 40px;
+    border-radius: 2%;
+    border: 2px dotted rgb(206, 193, 193);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.categories {
+    display: inline-block;
+    width: 22%;
+    height: 50vh;
+    background-color: #a1ffb5;
+    vertical-align: top;
+    margin-left: 200px;
+    border-radius: 2%;
+    border: 2px dotted rgb(206, 193, 193);
+}
