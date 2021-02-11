@@ -1,25 +1,46 @@
 body {
     overflow: auto;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 .main-container {
     display: block; 
     width: 100%;
-    height: 100%;
-    background-color: rgb(252, 184, 184);
+    height: auto;
+    background-color: rgb(255, 220, 220);
+}
+.login-menu {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 72%;
+}
+.logout-btn {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 90%;
+}
+.to-dashboard {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 90%;
+}
+.to-frontend {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 90%;
 }
 .website-header {
+    display: block;
     margin-left: 40px;
 }
 hr {
-    border-style: 2px dotted  rgb(206, 193, 193);
+    border-style: 2px dotted  rgb(214, 203, 203);
 }
 .posts {
     display: inline-block;
     width: 55%;
-    height: 100%;
-    background-color: #9ac2fa;
+    height: auto;
+    background-color: #bad6fc;
     vertical-align: top;
     margin-left: 40px;
     border-radius: 2%;
@@ -27,13 +48,165 @@ hr {
     padding-left: 20px;
     padding-right: 20px;
 }
+.posts-headline-style {
+    display: block;
+    width: 95%;
+    height: 5%;
+    margin: 15px 0 15px 0;
+    padding: 5px 15px 5px 15px;
+    background-color: #fde8f8;
+    color: rgb(31, 30, 29);
+    font-weight: bold;
+    font-size: x-large;
+}
+.posts-category-style {
+    display: block;
+    width: 95%;
+    margin: 15px 0 15px 0;
+    padding: 5px 15px 5px 15px;
+    text-align: right;
+    font-weight: bold;
+    font-size: large;
+}
+.posts-style {
+    display: block;
+    width: 95%;
+    height: 30%;
+    color: rgb(31, 30, 29);
+    font-weight: bold;
+    background-color: #fde8f8;
+    margin-bottom: 10px;
+    padding: 10px 15px 5px 15px;
+}
 .categories {
     display: inline-block;
     width: 22%;
-    height: 50vh;
-    background-color: #a1ffb5;
+    height: auto;
+    background-color: #d2fcff;
     vertical-align: top;
     margin-left: 200px;
     border-radius: 2%;
     border: 2px dotted rgb(206, 193, 193);
 }
+.all-category-style {
+    display: block;
+    width: 85%;
+    height: 5%;
+    margin: 15px;
+    padding: 10px 0 10px 0;
+    background-color: #fde8f8;
+    color: rgb(31, 30, 29);
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+.blog-text-style {
+    display: block;
+    background-color: #fde8f8;
+}
+.my-container {
+    display: block; 
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    background-color: rgb(255, 220, 220);
+}
+.left-form {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    background-color: #aecffd;
+    vertical-align: top;
+    margin-left: 40px;
+    border-radius: 2%;
+    border: 2px dotted rgb(206, 193, 193);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.right-form {
+    display: inline-block;
+    width: 23%;
+    height: 50vh;
+    background-color: #ccffd7;
+    padding-left: 80px;
+    vertical-align: top;
+    margin-left: 200px;
+    border-radius: 2%;
+    border: 2px dotted rgb(206, 193, 193);
+}
+.cat {
+    width: 80%;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+  }
+.image-container {
+    display: block;
+    width: 80%;
+}
+.upload-image {
+    display: inline-block;
+}
+.image-align {
+    display: inline-block;
+
+}
+#align {
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    margin-left: 210%;
+}
+.textarea {
+    width: 80%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    resize: vertical;
+    max-height: 400px;
+}
+.post-it {
+    width: 80%;
+    padding: 16px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
+.post-it:hover {
+    background-color: #a5fda8
+}
+.post-it:active {
+    background-color: #feffb4;
+    box-shadow: 0 5px rgb(253, 131, 182);
+    transform: translateY(4px);
+}
+.add-new-cat-input {
+    width: 70%;
+    margin-top: 20%;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    color: black;
+}
+.btn-add-new-cat {
+    width: 70%;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
+.btn-add-new-cat:hover {
+    background-color: #85e7ff
+}
+.btn-add-new-cat:active {
+    background-color: #fafc89;
+    box-shadow: 0 5px rgb(255, 149, 193);
+    transform: translateY(4px);
+}
+
