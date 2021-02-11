@@ -15,7 +15,7 @@
 
                 $pdo = dbConnect("blog");
 
-                #********** PROCESS FORM LOGIN **********#
+                #********** PROCESS FORM LOGIN ***************#
 
                 if (isset($_POST['login']) && isset($_POST['password'])) {
                     $login = strip_tags($_POST['login']);

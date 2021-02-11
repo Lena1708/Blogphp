@@ -16,14 +16,15 @@
 
 				$pdo = dbConnect("blog");
 
-				#**********   ???????????????????     ***************#
+				#********** CHECKING IF USER IS LOGGED IN ***************#
 				$isUserLoggedIn = isset($_COOKIE['username']);
+if(DEBUG)		echo "<p class='debug'>Line <b>" . __LINE__ . "</b>: '$isUserLoggedIn' = User is Logged in  <i>(" . basename(__FILE__) . ")</i></p>";
 
 				#********** INITIALIZE VARIABLES *************#
 				$blogpostHeadlineArray = NULL;
 
 
-				#************  ??????????????????     ******************#
+				#************ CHECK WHETHER PARMETER WAS PASSED ******************#
 
 				if (isset($_GET['category'])) {
 					$categoryFromUrl = $_GET['category'];
@@ -33,6 +34,7 @@
 				}
 
 				$allCategoryArray = Category::fetchAllFromDb($pdo);
+	
 
 #*****************************************************************************************#
 
@@ -51,14 +53,15 @@
 </head>
 
 <body>
+	<!-- ************** MAIN CONTAINER ************** -->
 <div class="main-container">
 
-
+	<!-- ************** LOGIN FORM ****************** -->
 	<?php if(!$isUserLoggedIn) :?>
 		<div class="login-menu">
 			<form method="POST" action="login-handler.php">
 				<div class="container">
-					<!-- <input type="hidden" name="loginSent"/>-->
+					<!--<input type="hidden" name="loginSent"/>-->
 					<input type="text" name="login" placeholder="Enter Email"/>
 					<input type="text" name="password" placeholder="Enter Password"/>
 					<input type="submit" value="Login"/>
@@ -73,14 +76,16 @@
 			</form>
 		</div>
 	<?php endif; ?>
+
+	<!-- ************** TO-DASHBOARD BTN ************* -->
 	<div class="to-dashboard">
-			<a href="http://localhost/kurs%201/Blog-Projekt%20Olena%20Stets/dashboard.php">To Dashboard</a>
-		</div>
+		<a href="http://localhost/kurs%201/Blog-Projekt%20Olena%20Stets/dashboard.php">To Dashboard</a>
+	</div>
 	<div class="website-header">
 		<h1>PHP-Projekt Blog</h1>
 	</div>
 
-
+	<!-- ************** BLOG POSTS CONTAINER ********* -->
 	<div class="posts">
 		<?php foreach ($blogpostHeadlineArray as $key => $value) : ?>
 			<div class="posts-category-style"><?php echo $value->cat_name; ?></div>
@@ -96,7 +101,7 @@
 		<?php endif; ?>
 	</div>
 
-
+	<!-- ************** CATEGORIES CONTAINER ********* -->
 	<div class="categories">
 		<?php foreach ($allCategoryArray as $key => $value) : ?>
 			<div class="all-category-style"><a href="?category=<?php echo $value->cat_id ?>"><?php echo $value->cat_name ?></a></div>

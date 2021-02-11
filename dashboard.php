@@ -23,27 +23,27 @@
 				if (!$isUserLoggedIn) {
 					header("Location: index.php");
 				}
+	
 
 				#********** INITIALIZE VARIABLES *************#
 				$blogpostHeadlineArray = NULL;
 
-				$categoryArray    = NULL;
-				$selectedCategory = NULL;
+				$categoryArray    	   = NULL;
+				$selectedCategory 	   = NULL;
 
 				$alignArray = array("01" => "align left", "02" => "align right");
-				$align = NULL;
+				$align 				   = NULL;
 
-				$addNewCategory = NULL;
-				$errorAddNewCategory = NULL;
+				$addNewCategory 	   = NULL;
+				$errorAddNewCategory   = NULL;
 
-				$heading = NULL;
-				$errorHeading = NULL;
+				$heading 			   = NULL;
+				$errorHeading 		   = NULL;
 
-				$writePost = NULL;
+				$writePost 			   = NULL;
 
-				$selectedUser = NULL;
+				$selectedUser 		   = NULL;
 
-				#************ ?????????????????????????  **********#
 
 				$categoryArray = Category::fetchAllFromDb($pdo);
 
@@ -69,12 +69,16 @@
 					echo "Your Align Text: $align<br/>";
 				}
 
+
 				if (isset($selectedCategory) && isset($heading) && isset($align) && isset($writePost)) {
 					Blog::saveToDb($pdo, new Blog($heading, NULL, $align, $writePost, $selectedCategory, $_COOKIE['userId']));
 					Blog::saveToDb($pdo, new Blog($heading, NULL, $align, $writePost, $selectedCategory, $_COOKIE['userId']));
 
 					echo "<h1>Saved to database!</h1>";
-					header("Location: index.php");
+					
+					#****** Redirection to index.php after adding a new blog post ********#
+					//header("Location: index.php");
+
 				}
 
 #*****************************************************************************************#
@@ -94,17 +98,23 @@
 </head>
 
 <body>
-	<div class="my-container">
 
+	<!-- ************** MAIN CONTAINER ************** -->
+		<div class="my-container">
 
+	<!-- ************** LOGOUT BTN ****************** -->
 		<div class="logout-btn">
 			<form method="POST" action="logout-handler.php">
 				<button type="submit">Logout</a>
 			</form>
 		</div>
+
+	<!-- ************** TO-FRONTEND BTN ************* -->
 		<div class="to-frontend">
 			<a href="http://localhost/kurs%201/Blog-Projekt%20Olena%20Stets/index.php">To Frontend</a>
 		</div>
+	
+	<!-- ************** LEFT FORM CONTAINER ********* -->
 		<div class="left-form">
 			<p>
 			<h1>PHP - PROJEKT BLOG - DASHNBOARD</h1>
@@ -169,6 +179,7 @@
 			</form>
 		</div>
 
+	<!-- ************** RIGHT FORM CONTAINER ********* -->
 		<div class="right-form">
 
 			<form action="category-form.php">
