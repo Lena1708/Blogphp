@@ -18,7 +18,7 @@
 
 				#********** CHECKING IF USER IS LOGGED IN ***************#
 				$isUserLoggedIn = isset($_COOKIE['username']);
-if(DEBUG)		echo "<p class='debug'>Line <b>" . __LINE__ . "</b>: '$isUserLoggedIn' = User is Logged in  <i>(" . basename(__FILE__) . ")</i></p>";
+				
 
 				#********** INITIALIZE VARIABLES *************#
 				$blogpostHeadlineArray = NULL;
