@@ -76,7 +76,7 @@
 
 					echo "<h1>Saved to database!</h1>";
 					
-					#****** Redirection to index.php after adding a new blog post ********#
+					#****** Redirection to index.php after adding a new blog post if needed ********#
 					//header("Location: index.php");
 
 				}
